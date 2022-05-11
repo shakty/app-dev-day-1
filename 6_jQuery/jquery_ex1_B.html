@@ -62,12 +62,12 @@
     $(document).ready( function() {
         
         // Uncomment for step-by-step execution.
-        // debugger;
+        debugger;
         
         // From Ex1A.
         // We can chain methods in jQuery.
         $('.myClass-0-1').html('jQuery is <em>easy</em>.<br/><br/>');
-        // The text is there but small. Let's make it bigger.
+        // The text is a bit small. Let's make it bigger.
         $('.myClass-0-1').css({ 'font-size': '40px' });
         ///////////////////////////////////////////////
 
@@ -97,8 +97,8 @@
         });
 
         // Checkpoint.
-        // The first children shifted at a lower on the screen, but also
-        // all remaning children have been shifted below. Why? 
+        // The first child shifted lower on screen, but also
+        // all remaning children have been shifted below it. Why? 
         // Because the HTML structure imposes them be rendered after the
         // first div (it can overwritten by other CSS rules).
 

@@ -85,15 +85,11 @@
             // Write here anything you want to happen
             // for each div with the same class.
 
-            // Here 'this' represents a single div.
+            // Note: Here 'this' represents a single div.
+            // Note2: Ref: https://www.w3schools.com/Css/css_colors_rgb.asp
             
-            $(this).html('This is div number ' + (counter+1));
-
-            // Let's differentiate the divs based on the index number.
-            // Use the index to differentiate their rgb color code.
-            // Ref: https://www.w3schools.com/Css/css_colors_rgb.asp
-            let blue = baseBlue * counter;
-            let someColor = 'rgb(100, 200, ' + blue + ')';
+            // Make it dependent on ordinal position.
+            // let someColor = 'XXX';
 
             $(this).css({'background-color': someColor});
 
@@ -109,17 +105,12 @@
         let funFacts = [
             'McDonald\'s once made bubblegum-flavored broccoli',
             'Some fungi create zombies, then control their minds',
-            'There\'s only one letter that doesn’t appear in any U.S. state name',
+            'There\'s only one letter that doesn\'t appear in any U.S. state name',
             'Scotland has 421 words for "snow"',
             'Peanuts aren\'t technically nuts'
         ];
 
         // Set the text of the divs to the fun facts above.
-        $('.myClass-0-3').each(function(counter) {
-            // Exercise:
-            // Set a fun fact in each div.
-            $(this).html(funFacts[counter]);
-        });
 
         // Solution.
         // doSolutionB();
@@ -148,7 +139,7 @@
 
     </script>
     <!-- Solution. -->
-    <script src="js/solutions/ex1C.js"></script>
+    <!-- <script src="js/solutions/ex1C.js"></script> -->
 
 </body>
 </html>
