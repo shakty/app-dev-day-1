@@ -52,9 +52,11 @@ console.log('Is the number even? ' + (isEven(num) ? 'Yes' : 'No'));
 ///////////////////////////////////////////
 
 // a. Did you notice that the 'is-odd' package has more than twice the downloads
-// the package 'is-even'? (Right-column on the NPM web site, "Weekly Downloads")
+// of the package 'is-even'? (Right-column on the NPM web site, 
+// "Weekly Downloads") Why is that?
 // Are developers more insecure when it comes to odd numbers? There is actually 
-// a more rational explanation. Check the source code of the packages inside the node_modules/ folder.
+// a more rational explanation. Check the source code of the packages inside 
+// the node_modules/ folder.
 
 // Hint: each NodeJS package contains a package.json file. This file contains
 // all the metadata about the project (name, author, keywords, etc.); the field // "main" contains the name of the file that is executed by the require() 
