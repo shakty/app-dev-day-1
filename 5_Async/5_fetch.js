@@ -69,7 +69,8 @@ fetch(ENDPOINT + query)
 // // Exercise 2. Async Fetch.
 // ///////////////////////////
 
-// Let's do it again with the async/await pattern.
+// Let's do it again with the async/await pattern, but let's
+// print only the name, rather than the full object.
 
 const fetch = require("node-fetch");
 const ENDPOINT = "https://swapi.dev/api/";

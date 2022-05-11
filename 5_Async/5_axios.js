@@ -31,7 +31,7 @@
 // After reading the SWAPI doc, adjust the query variable below accordingly.
 
 // Require fetch.
-const fetch = require("node-fetch");
+const axios = require("axios");
 
 // API address.
 const ENDPOINT = "https://swapi.dev/api/";
@@ -39,24 +39,9 @@ const ENDPOINT = "https://swapi.dev/api/";
 // Check the SWAPI doc and change this.
 let query = 'REPLACE_WITH_RIGHT_QUERY';
 
-fetch(ENDPOINT + query)
-  .then(res => {
-    // Why 400 ?
-    // https://en.wikipedia.org/wiki/List_of_HTTP_status_codes  
-    if (res.status >= 400) {
-      throw new Error("Bad response from server");
-    }
-    
-    // Fetches gets the headers first, then it process
-    // the body asynchronously. 
-    
-    // console.log(res);
-
-    // It also returns a promise.
-    return res.json();
-  })
+axios(ENDPOINT + query)
   .then(json => {
-    console.log('We got: ' + json.name);
+    console.log(json.data);
   })
   .catch(err => {
     console.error(err);
@@ -65,16 +50,20 @@ fetch(ENDPOINT + query)
 // // Exercise 2. Async Fetch.
 // ///////////////////////////
 
-// Let's do it again with the async/await pattern.
+// Let's do it again with the async/await pattern, but let's
+// print only the name, rather than the full object.
 
-const fetch = require("node-fetch");
+const axios = require("axios");
+
+// API address.
 const ENDPOINT = "https://swapi.dev/api/";
 
-// Check the SWAPI doc and change this.
-let query = 'REPLACE_WITH_RIGHT_QUERY';
+// Change me.
+let query = 'people/1';
 
 // Hint: remember that await can be used only inside an async function.
 // If needed, you may create an anonimous async function.
+
 
 
 // Exercise 3. Optional. Fetch them all.
@@ -96,7 +85,7 @@ let query = 'REPLACE_WITH_RIGHT_QUERY';
 // Hint1: you might use a recursive solution.
 // Ref: https://javascript.info/recursion
 
-const fetch = require("node-fetch");
+const axios = require("axios");
 const ENDPOINT = "https://swapi.dev/api/";
 let query = "people/";
 
@@ -108,7 +97,7 @@ let page = 1;
 
 // Hint: you may use a while loop.
 
-const fetch = require("node-fetch");
+const axios = require("axios");
 const ENDPOINT = "https://swapi.dev/api/";
 let query = "people/";
 
@@ -122,14 +111,13 @@ let page = 1;
 
 // Now that you now from Exercise 3 how many characters are fetchable
 // from the star wars API, you can setup X concurrent fetch requests.
-
-// The Promise API has a promising method named Promise.all() which takes
+// The Promise API has a method named Promise.all() which takes
 // as input an array of promises and waits for all them to settle
 // before executing .then().
 
 // Hint: create all promises in a loop and them to an array.
 
-const fetch = require("node-fetch");
+const axios = require("axios");
 const ENDPOINT = "https://swapi.dev/api/";
 let query = "people/";
 
@@ -137,4 +125,3 @@ let db = [];
 let page = 1;
 
 let promises = new Array(9);
-
