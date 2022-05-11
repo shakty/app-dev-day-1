@@ -36,7 +36,7 @@ function mySolutionClick() {
             'box-shadow':'0px 1px 1px 1px black'
         }); 
 
-        // Checkpoint. Why is doGradient defined here?
+        // Checkpoint. Why is doGradient defined (i.e., available) here?
         doGradient(Math.floor(Math.random()*255), 
                    Math.floor(Math.random()*255));
 
