@@ -59,6 +59,6 @@ let comfortObj = 1/3;
 ///////////////////////
 
 // I didn't tell you about it before, but promises have a third method: finally.
-// It is called regardless of whether the promise was successefull or failed.
+// It is called regardless of whether the promise was successfull or failed.
 // Use the finally statement to set the value of exerciseIsOver to true,
 // and if it is true and report the value to console.
